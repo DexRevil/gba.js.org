@@ -38,15 +38,24 @@ Licensed under the MIT License (view LICENSE.md for more information)
 						<img id="logo-small" src="assets/logo-small.png">
 					</a>
 				</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<li>
+					<a target="_blank" style="text-decoration: none;" href="https://github.com/ayvacs/gba.js.org">View Source Code</a>
+				</li>
 				<li>|</li>
-                <li id="play" class="show">Jugar</li>
-                <li id="pause" class="hide">Pausa</li>
+                <li>File
+                    <ul>
+                        <li><span>BIOS: </span> <input type="file" id="bios_load" class="files"></li>
+                        <li><span>Game: </span> <input type="file" id="rom_load" class="files"></li>
+                    </ul>
+                </li>
+                <li id="play" class="show">Play</li>
+                <li id="pause" class="hide">Pause</li>
                 <li id="restart">Restart</li>
                 <li>Settings
                     <ul>
-                        <li><input type="checkbox" id="skip_boot"> Saltar Boot Intro</li>
+                        <li><input type="checkbox" id="skip_boot"> Skip Boot Intro</li>
                         <li><input type="checkbox" id="toggleSmoothScaling" checked="checked"> Smooth Scaling</li>
-                        <li><input type="checkbox" id="toggleDynamicSpeed"> Velocidad Dinamica</li>
+                        <li><input type="checkbox" id="toggleDynamicSpeed"> Dynamic Speed</li>
                         <li><input type="checkbox" id="offthread-cpu" checked="checked"> CPU off-thread</li>
                         <li><input type="checkbox" id="offthread-gpu" checked="checked"> GPU off-thread</li>
                         <li><input type="checkbox" id="sound"> Sound</li>
@@ -86,6 +95,19 @@ Licensed under the MIT License (view LICENSE.md for more information)
                         <li>
                             <input type="range" id="volume">
                         </li>
+                    </ul>
+                </li>
+                <li id="saves_menu">
+                    Saves
+                    <ul id="saves_menu_container">
+                        <li><span>Import:</span><input type="file" id="import" class="files"></li>
+                        <li id="existing_saves">
+                            <span>Existing Saves</span>
+                            <ul id="existing_saves_list">
+
+                            </ul>
+                        </li>
+                        <li><a href="./" id="export" target="_new">Export All Saves</a></li>
                     </ul>
                 </li>
                 <li id="fullscreen">Fullscreen</li>
